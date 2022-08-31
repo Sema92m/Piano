@@ -21,7 +21,7 @@ h1 {
     height: 500px;
     background: rgba(10, 136, 41, 0.664);
 }
-.piano-key-white {
+.piano-key-white, .piano-key-black {
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -31,9 +31,27 @@ h1 {
     border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
-}
-.piano-key-white span,
-.piano-key-black span {
-    font-size: 25px;
+    font-size: 20px;
+    user-select: none;
 }
 
+.container2 {
+    display: flex;
+    position: absolute;
+    top: 175px;
+}
+.piano-key-black {
+    align-items: center;
+    height: 80px;
+    top: 175px;
+    background-color: black;;
+    border: 1px solid white;
+    border-top: none;
+    color: white;
+    z-index: 2;
+    
+}
+
+.piano-key-black:nth-child(5) {
+    visibility: hidden;
+}
